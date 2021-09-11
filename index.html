@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>CoderCookies | Coding School for Kids and Young Adults</title>
+  <meta name="description" content="Coding School for Kids and Young Adults.">
+  <meta name="author" content="CoderCookies">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+
+  
+   <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+  
+  <!-- Scripts dmd
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+  	
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+<header class="main_nav green">
+	<div class="container">
+		<div class="twelve columns">
+			<div class="logo"><a href="https://www.CoderCookies.com">Coder Cookies</a></div>
+		</div>
+	</div>
+</header>
+
+
+<div class="container">
+	<div id="typewriter" style="background-color: orange" class="twelve columns">
+        <h2 id="typetext0" >>></h2>
+        <h2 id="typetext1" >>></h2>
+        <h2 id="typetext2" >>></h2>
+     </div>
+</div>
+
+
+<div class="container main">
+	<div class="row">
+		<div class="four columns ">
+			<img src="https://cdn.pixabay.com/photo/2016/10/16/16/33/dual-screen-1745705_960_720.png" />
+		</div>
+		<div class="four columns ">
+			<<img src="https://cdn.pixabay.com/photo/2017/09/25/18/56/social-media-2786261_960_720.jpg" />
+		</div>
+		<div class="four columns ">
+			<img src="https://cdn.pixabay.com/photo/2016/03/27/18/54/technology-1283624_960_720.jpg" />
+		</div>
+	</div>
+</div><!--Container-->
+
+<div class="row green">
+	<div class="container">
+		<div class="four columns">
+			<img class="avatar" src="images/CoderCookiesNewLogo.jpg" />
+		</div>
+		<div class="eight columns">
+			<h2 class="bio">About CoderCookies</h2>
+			<h2 style="font-size:30px"> We are a team of software engineers and passionate teachers, with a combined experience of several decades in some of the best tech companies of the world like BlackBerry, Amazon, Apple, etc. Our team boasts of well trained Code Mentors who have a wider range of experience in programming, Data Science, Machine Learning, etc. and a passion to teach. We teach in small batches using a customized tailor-to-the-learning-method approach. We inspire and encourage creativity, with a keen focus to ensure that our students get the best coding concepts, skills and learning experience. We want no kid, teen or young adult to be left behind in this Coding journey </h2>
+		</div>
+	</div>
+</div><!--Row Green-->
+	
+<footer>
+	<div class="container">
+		<div class="row twelve columns">
+			<ul class="social">
+			<li class="facebook"><a href="#"><i class="fab fa-facebook"></i></a></li>
+			<li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+			<li class="instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
+			<li class="youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
+			
+			</ul>
+		</div>
+		<div class="row twelve columns">
+			<p class="copyright">&copy; 2020 CoderCookies. All Rights Reserved.</p>
+		</div>
+	</div>
+</footer>
+	
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript">
+
+ var allText = ["Hello, my name is Coder Cookies", "I love computers and programming!", "Check out my projects!"];
+
+var currentIndex0 = 0;
+var currentIndex1 = 0;
+var currentIndex2 = 0;
+
+var textHeader0 = document.getElementById("typetext0");
+var textHeader1 = document.getElementById("typetext1");
+var textHeader2 = document.getElementById("typetext2");
+
+
+var myVar0;
+
+var myVar1;
+
+var myVar2;
+
+
+//////Typewriter
+
+
+function add0() {    
+	var text =  allText[0].substring(0, currentIndex0 + 1);
+	textHeader0.innerHTML = ">> " +  text;
+    currentIndex0+=1;
+
+    if(text === allText[0]) {
+
+        clearInterval(myVar0);
+        setTimeout(function() {
+            myVar0 = setInterval(remove0, 50);
+        }, 1000);
+    }
+
+}
+
+function remove0() {
+    var text =  allText[0].substring(0, currentIndex0 - 1);
+    textHeader0.innerHTML = ">> " + text;
+    currentIndex0-=1;
+    
+    if(text === "") {
+        clearInterval(myVar0);
+;
+        
+        currentIndex0 = 0
+        setTimeout(function() {
+			myVar0 = setInterval(add0, 100);
+		}, 200);
+
+    }
+}
+
+
+function add1() {    
+	var text =  allText[1].substring(0, currentIndex1 + 1);
+	textHeader1.innerHTML = ">> " +  text;
+    currentIndex1+=1;
+
+    if(text === allText[1]) {
+
+        clearInterval(myVar1);
+        setTimeout(function() {
+            myVar1 = setInterval(remove1, 50);
+        }, 1000);
+    }
+
+}
+
+function remove1() {
+    var text =  allText[1].substring(0, currentIndex1 - 1);
+    textHeader1.innerHTML = ">> " + text;
+    currentIndex1-=1;
+    
+    if(text === "") {
+        clearInterval(myVar1);
+;
+        
+        currentIndex1 = 0
+        setTimeout(function() {
+			myVar1 = setInterval(add1, 100);
+		}, 200);
+
+    }
+}
+
+
+function add2() {    
+	var text =  allText[2].substring(0, currentIndex2 + 1);
+	textHeader2.innerHTML = ">> " +  text;
+    currentIndex2+=1;
+
+    if(text === allText[2]) {
+
+        clearInterval(myVar2);
+        setTimeout(function() {
+            myVar2 = setInterval(remove2, 50);
+        }, 1000);
+    }
+
+}
+
+function remove2() {
+    var text =  allText[2].substring(0, currentIndex2 - 1);
+    textHeader2.innerHTML = ">> " + text;
+    currentIndex2-=1;
+    
+    if(text === "") {
+        clearInterval(myVar2);
+;
+        
+        currentIndex2 = 0
+        setTimeout(function() {
+			myVar2 = setInterval(add2, 100);
+		}, 200);
+
+    }
+}
+////// end of typewriter
+
+/*
+function bodyOnload() {
+    //windowResized();
+    myVar0 = setInterval(add0, 100);
+    setTimeout(function() {
+        myVar1 = setInterval(add1, 100);
+    }, 500);
+    setTimeout(function() {
+        myVar2 = setInterval(add2, 100);
+    }, 1000);
+    var OSName="Unknown OS";
+    if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+    if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+    if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+    if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+    console.log(OSName)
+}
+*/
+
+add0()
+remove0()
+
+add1()
+remove1()
+
+add2()
+remove2()
+
+</script>
+</body>
+</html>
